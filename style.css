@@ -1,0 +1,706 @@
+/* =========================================
+GOOGLE FONT
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap');
+
+/* =========================================
+RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(180deg,#fff8fc,#ffeef6,#fff);
+    color:#444;
+    overflow-x:hidden;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+section{
+    padding:90px 8%;
+}
+
+/* =========================================
+SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff9ec9;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#fff;
+}
+
+/* =========================================
+LOADER
+========================================= */
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(135deg,#ffd7e9,#fff);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    transition:1s;
+}
+
+.loader-heart{
+    font-size:70px;
+    animation:heartbeat 1.2s infinite;
+}
+
+#loader h2{
+    margin-top:20px;
+    font-size:20px;
+    color:#ff5e9b;
+    font-weight:600;
+}
+
+@keyframes heartbeat{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.2);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* =========================================
+MUSIC BUTTON
+========================================= */
+
+#musicBtn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#ff8fbc;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    z-index:999;
+    box-shadow:0 10px 25px rgba(255,111,170,.3);
+    transition:.3s;
+}
+
+#musicBtn:hover{
+    transform:scale(1.08);
+}
+
+/* =========================================
+FLOAT EFFECT
+========================================= */
+
+#hearts-container,
+#flowers-container{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:0;
+}
+
+/* =========================================
+HERO
+========================================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:#ffd8ea;
+    border-radius:50%;
+    filter:blur(150px);
+    opacity:.7;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:700px;
+}
+
+.mini-title{
+    display:inline-block;
+    color:#ff78ae;
+    font-size:15px;
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:75px;
+    color:#ff5b97;
+    line-height:1.15;
+}
+
+.hero h3{
+    margin-top:20px;
+    font-size:30px;
+    color:#555;
+}
+
+.hero p{
+    margin:25px auto;
+    max-width:520px;
+    line-height:1.8;
+    color:#666;
+    font-size:17px;
+}
+
+/* =========================================
+BUTTON
+========================================= */
+
+#openLetter{
+    padding:16px 38px;
+    border:none;
+    border-radius:50px;
+    background:#ff7eb6;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.35s;
+    box-shadow:0 15px 30px rgba(255,118,175,.35);
+}
+
+#openLetter:hover{
+    transform:translateY(-5px);
+    background:#ff5e9b;
+}
+
+#openLetter i{
+    margin-left:8px;
+}
+
+.scroll-down{
+    position:absolute;
+    bottom:35px;
+    left:50%;
+    transform:translateX(-50%);
+    color:#ff74a8;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    animation:floatDown 2s infinite;
+}
+
+@keyframes floatDown{
+
+    0%{
+        transform:translate(-50%,0);
+    }
+
+    50%{
+        transform:translate(-50%,10px);
+    }
+
+    100%{
+        transform:translate(-50%,0);
+    }
+
+                            }
+
+/* =========================================
+LETTER
+========================================= */
+
+.letter{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.envelope{
+    width:100%;
+    max-width:850px;
+    background:rgba(255,255,255,.65);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.7);
+    border-radius:30px;
+    padding:45px;
+    box-shadow:0 20px 45px rgba(255,125,180,.15);
+}
+
+.paper-title{
+    display:block;
+    text-align:center;
+    font-family:'Great Vibes',cursive;
+    font-size:42px;
+    color:#ff5e9b;
+    margin-bottom:30px;
+}
+
+.paper p{
+    font-size:17px;
+    line-height:2;
+    color:#555;
+    text-align:center;
+}
+
+/* =========================================
+GALLERY
+========================================= */
+
+.gallery{
+    text-align:center;
+}
+
+.gallery h2{
+    font-size:42px;
+    color:#ff5e9b;
+    margin-bottom:12px;
+}
+
+.gallery p{
+    color:#777;
+    margin-bottom:45px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+.photo{
+    background:#fff;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.photo:hover{
+    transform:translateY(-8px) scale(1.02);
+}
+
+.photo img{
+    height:320px;
+    object-fit:cover;
+    cursor:pointer;
+}
+
+.photo span{
+    display:block;
+    padding:18px;
+    color:#666;
+    font-size:15px;
+}
+
+/* =========================================
+REASONS
+========================================= */
+
+.reasons{
+    text-align:center;
+}
+
+.reasons h2{
+    font-size:40px;
+    color:#ff5e9b;
+    margin-bottom:45px;
+}
+
+.reason-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+}
+
+.reason-card{
+    background:rgba(255,255,255,.8);
+    border-radius:20px;
+    padding:24px;
+    font-weight:500;
+    color:#555;
+    box-shadow:0 12px 30px rgba(255,120,170,.12);
+    transition:.35s;
+}
+
+.reason-card:hover{
+    transform:translateY(-8px);
+    background:#ff7eb6;
+    color:#fff;
+}
+
+/* =========================================
+TIMELINE
+========================================= */
+
+.timeline{
+    text-align:center;
+}
+
+.timeline h2{
+    font-size:40px;
+    color:#ff5e9b;
+    margin-bottom:50px;
+}
+
+.timeline-box{
+    max-width:850px;
+    margin:auto;
+    position:relative;
+}
+
+.timeline-box::before{
+    content:"";
+    position:absolute;
+    left:20px;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:#ffb5d3;
+}
+
+.timeline-item{
+    display:flex;
+    gap:25px;
+    margin-bottom:40px;
+    text-align:left;
+}
+
+.dot{
+    width:18px;
+    height:18px;
+    background:#ff5e9b;
+    border-radius:50%;
+    margin-top:8px;
+    flex-shrink:0;
+    box-shadow:0 0 15px rgba(255,94,155,.45);
+}
+
+.content{
+    background:#fff;
+    padding:22px;
+    border-radius:18px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    width:100%;
+}
+
+.content h3{
+    color:#ff5e9b;
+    margin-bottom:10px;
+}
+
+.content p{
+    color:#666;
+    line-height:1.7;
+}
+
+/* =========================================
+PLAYLIST
+========================================= */
+
+.playlist{
+    text-align:center;
+}
+
+.playlist h2{
+    font-size:40px;
+    color:#ff5e9b;
+    margin-bottom:35px;
+}
+
+.playlist-card{
+    max-width:650px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.song{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    padding:20px 25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.song:hover{
+    transform:translateX(8px);
+}
+
+.song i{
+    color:#ff5e9b;
+    font-size:22px;
+}
+
+.song span{
+    color:#555;
+    font-weight:500;
+}
+
+/* =========================================
+ENDING
+========================================= */
+
+.ending{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding-bottom:120px;
+}
+
+.ending-card{
+    max-width:800px;
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(18px);
+    padding:50px 35px;
+    border-radius:30px;
+    box-shadow:0 15px 40px rgba(255,120,170,.15);
+}
+
+.ending-mini{
+    display:inline-block;
+    color:#ff7eb6;
+    font-size:15px;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.ending h2{
+    font-family:'Great Vibes',cursive;
+    font-size:60px;
+    color:#ff5e9b;
+    margin-bottom:25px;
+}
+
+.ending p{
+    color:#666;
+    line-height:1.9;
+    margin-bottom:20px;
+}
+
+blockquote{
+    margin:30px 0;
+    padding:20px;
+    background:#fff5fa;
+    border-left:5px solid #ff7eb6;
+    border-radius:15px;
+    color:#ff5e9b;
+    font-style:italic;
+}
+
+.signature p{
+    margin-bottom:5px;
+}
+
+.signature h3{
+    color:#ff5e9b;
+    font-size:28px;
+    font-family:'Great Vibes',cursive;
+}
+
+/* =========================================
+FOOTER
+========================================= */
+
+footer{
+    background:#ffd9e9;
+    text-align:center;
+    padding:35px 20px;
+}
+
+footer i{
+    font-size:30px;
+    color:#ff5e9b;
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#555;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+footer small{
+    color:#777;
+}
+
+/* =========================================
+BACK TO TOP
+========================================= */
+
+#backToTop{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#ff7eb6;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    display:none;
+    z-index:999;
+    box-shadow:0 10px 25px rgba(255,120,170,.3);
+    transition:.3s;
+}
+
+#backToTop:hover{
+    transform:translateY(-5px);
+}
+
+/* =========================================
+LIGHTBOX
+========================================= */
+
+#lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.88);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+#lightbox img{
+    max-width:90%;
+    max-height:85%;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(255,255,255,.2);
+}
+
+#closeLightbox{
+    position:absolute;
+    top:25px;
+    right:35px;
+    color:#fff;
+    font-size:45px;
+    cursor:pointer;
+}
+
+/* =========================================
+ANIMATION
+========================================= */
+
+.fade-up{
+    opacity:0;
+    transform:translateY(60px);
+    transition:1s;
+}
+
+.fade-up.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media(max-width:768px){
+
+    section{
+        padding:70px 6%;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .hero h3{
+        font-size:24px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .paper-title{
+        font-size:34px;
+    }
+
+    .paper p{
+        font-size:15px;
+        line-height:1.9;
+    }
+
+    .gallery h2,
+    .reasons h2,
+    .timeline h2,
+    .playlist h2{
+        font-size:30px;
+    }
+
+    .ending h2{
+        font-size:44px;
+    }
+
+    .timeline-box::before{
+        left:8px;
+    }
+
+    .timeline-item{
+        gap:15px;
+    }
+
+    .song{
+        padding:18px;
+    }
+
+    #musicBtn,
+    #backToTop{
+        width:48px;
+        height:48px;
+        font-size:18px;
+    }
+
+}
